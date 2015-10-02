@@ -1,14 +1,11 @@
 language: node_js
 node_js:
 - '4.0'
-addons:
-  apt:
-    packages:
-    - lynx
 
 before_install:
-  - curl -sSL https://raw.githubusercontent.com/robisonsantos/evm/master/install | bash
-  - source $HOME/.evm/scripts/evm
+  - git clone https://github.com/HashNuke/asdf.git ~/.asdf
+  - echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+  - source ~/.bashrc
 
 script:
-  - evm list
+  - asdf plugin-list
