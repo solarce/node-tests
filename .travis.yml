@@ -5,6 +5,7 @@ node_js:
 before_install:
   - git clone https://github.com/HashNuke/asdf.git ~/.asdf
   - source $HOME/.asdf/asdf.sh
+  - asdf plugin-add erlang https://github.com/HashNuke/asdf-erlang.git
   - asdf install erlang 17.3
 
 script:
